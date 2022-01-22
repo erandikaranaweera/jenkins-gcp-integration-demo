@@ -22,7 +22,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-ran') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'ranawera') {
                             myapp.push("latest")
                             myapp.push("${env.BUILD_ID}")
                     }
