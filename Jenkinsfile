@@ -15,7 +15,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("ranawera/cw:${env.BUILD_ID}")
+                    myapp = docker.build("ranawera/cw:${env.BUILD_ID}").toLowerCase()
                 }
             }
         }
